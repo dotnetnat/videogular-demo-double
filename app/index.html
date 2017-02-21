@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Videogular demo</title>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/videogular/videogular.js"></script>
+    <script src="app.js"></script>
+    <script src="VideoPlayerController.js"></script>
+</head>
+
+<body ng-app="videogularApp">
+    <div class="header">
+        <h1>Welcome to the videogular demo</h1>
+        <p class="subtitle">Below you can see the resulting videogular player</p>
+    </div>
+    <div style="width:300px;height:200px;" class="videogular-container videoPlayers" ng-controller="VideoPlayerController">
+
+        <videogular vg-theme="videogularConfig.theme">
+            <vg-media vg-src="videogularConfig.sources" vg-native-controls="true">
+            </vg-media>
+        </videogular>
+        <hr/>
+        <div>
+            <button type="button" ng-click="changeVideo1(0)">Change Video 1</button>
+            <button type="button" ng-click="changeVideo2(1)">Change Video 2</button>
+        </div>
+    </div>
+</body>
+
+</html>
