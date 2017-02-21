@@ -2,4 +2,4 @@
 
 npm install && bower install
 
-grunt serve
+grunt serve   or  npm run dev
